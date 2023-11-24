@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head  th:replace="layout/layout::head"></head>
+<body>
+
+<div class="m-0 vh-100 row justify-content-center align-items-center">
+
+    <div class="col-auto p-5 text-center">
+
+
+        <div class="">
+            <h1>Autenticacion</h1>
+            <div class="" id="box-login" >
+                <form th:action="@{/auth/login}" method="post" class="form-login" >
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="nomusuario">Usuario</label>
+                        <input type="text" id="nomusuario" name="nomusuario" class="form-control" />
+                    </div>
+
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="password">Password</label>
+                        <input type="password" id="password" name="password" class="form-control" />
+                    </div>
+
+                    <ul class="nav nav-pills nav-justified mb-3">
+                        <li class="nav-item" >
+                            <a th:href="@{/auth/register}" class="nav-link active" >Registrarme</a>
+                        </li>
+                        <li class="nav-item" >
+                            <button type="submit" class="btn btn-primary btn-block mb-4">Ingresar</button>
+                        </li>
+                    </ul>
+
+                </form >
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
